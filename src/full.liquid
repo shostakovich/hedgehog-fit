@@ -1,6 +1,36 @@
+{%- assign seed = trmnl.system.timestamp_utc | date: "%s" | plus: 0 -%}
+{%- assign pose_count = poses | size -%}
+{%- assign pose_idx = seed | modulo: pose_count -%}
+{%- assign pose = poses[pose_idx] -%}
+{%- assign saying_count = pose.sayings | size -%}
+{%- assign say_idx = seed | divided_by: 7 | modulo: saying_count -%}
+{%- assign saying = pose.sayings[say_idx] -%}
+
+{%- assign anrede_value = trmnl.plugin_settings.custom_fields_values.anrede | default: "neutral" -%}
+{%- assign anr = "" -%}
+{%- unless anrede_value == "neutral" -%}
+  {%- assign pool = anrede[anrede_value] -%}
+  {%- if pool and pool.size > 0 -%}
+    {%- assign anr_idx = seed | divided_by: 13 | modulo: pool.size -%}
+    {%- assign anr = ", " | append: pool[anr_idx] -%}
+  {%- endif -%}
+{%- endunless -%}
+{%- assign text = saying | replace: "{ANR}", anr -%}
+
 <div class="layout">
-  <span class="title">Hedgehog Fit – Einrichtung OK</span>
+  <div class="grid">
+    <div class="col--span-7 flex flex--col flex--center-y flex--left gap">
+      <span class="title title--large" data-clamp="4">{{ text }}</span>
+      <span class="label label--small label--gray text--uppercase">{{ pose.label }}</span>
+    </div>
+    <div class="col--span-5 flex flex--center">
+      <img class="image image-dither image--contain h--72" src="{{ hog_images[pose_idx] }}">
+    </div>
+  </div>
 </div>
+
 <div class="title_bar">
-  <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
+  <img class="image" src="https://trmnl.com/images/plugins/trmnl--render.svg">
+  <span class="title">{{ trmnl.plugin_settings.instance_name | default: "Hedgehog Fit" }}</span>
+  <span class="instance">Fitness-Igel</span>
 </div>
