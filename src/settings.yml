@@ -3,7 +3,50 @@ name: Hedgehog Fit
 strategy: static
 framework_version: latest
 static_data: |
-  { "poses": [], "anrede": { "weiblich": [], "männlich": [] } }
+  {
+    "poses": [
+      { "label": "Planke", "sayings": [
+        "Halt durch{ANR}! Der Boden ist dein Freund — and one, and two!",
+        "Zittern ist nur Applaus von innen. Weiter so!",
+        "Bauch anspannen, Po anspannen — Lächeln nicht vergessen{ANR}!",
+        "Noch zehn Sekunden{ANR}! Du bist härter als dein Schweißband."
+      ]},
+      { "label": "Liegestütze", "sayings": [
+        "Drück die Welt von dir weg{ANR} — and up, and down!",
+        "Ein Liegestütz für dich, einer für den Igel. Fair, oder?",
+        "Brust raus, Stacheln raus — wir geben alles!",
+        "Wer drückt, gewinnt{ANR}. Komm schon, noch fünf!"
+      ]},
+      { "label": "Bein-Dehnung", "sayings": [
+        "Bein lang machen, Sorgen kurz halten{ANR}. And stretch!",
+        "Der Stuhl ist heute dein Trainingsgerät — nutz ihn!",
+        "Schön dehnen, nicht reißen — wir sind ja kein Gummiband.",
+        "Lang wie Spaghetti, stark wie Stahl{ANR}!"
+      ]},
+      { "label": "Aufwärmen", "sayings": [
+        "And march, and march! Aufwärmen ist die halbe Miete.",
+        "Knie hoch, Laune hoch — los geht der Tanz{ANR}!",
+        "Beweg die Stacheln{ANR}, der Tag wartet nicht!",
+        "Erst wackeln, dann werkeln. And one, and two!"
+      ]},
+      { "label": "Sitz-Dehnung", "sayings": [
+        "Im Sitzen dehnen zählt auch — clever{ANR}!",
+        "Zeh berühren, Ehre gewinnen. Streck dich{ANR}!",
+        "Kein Aufstehen nötig — Ausreden auch nicht.",
+        "Sanft dehnen, tief atmen — and relax!"
+      ]},
+      { "label": "Bizeps", "sayings": [
+        "And curl, and curl — die Ärmchen werden Ärmel sprengen!",
+        "Pump die Stacheln auf{ANR} — volle Power!",
+        "Heute leicht, morgen Legende. Weiter so{ANR}!",
+        "Bizeps wie ein Igel im Frühling — voll erblüht!"
+      ]}
+    ],
+    "anrede": {
+      "weiblich": ["Süße", "Liebes", "Powerfrau"],
+      "männlich": ["Großer", "Champion", "Kämpfer"]
+    }
+  }
 custom_fields:
   - keyname: anrede
     field_type: select
