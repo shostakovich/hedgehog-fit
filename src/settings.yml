@@ -1,0 +1,15 @@
+---
+name: Hedgehog Fit
+strategy: static
+framework_version: latest
+static_data: |
+  { "poses": [], "anrede": { "weiblich": [], "männlich": [] } }
+custom_fields:
+  - keyname: anrede
+    field_type: select
+    name: Anrede
+    description: Wie der Igel dich anspricht
+    options:
+      - Neutral
+      - Weiblich
+      - Männlich
