@@ -1,0 +1,16 @@
+---
+watch:
+  - src
+  - .trmnlp.yml
+
+custom_fields:
+  anrede: weiblich
+
+time_zone: Europe/Berlin
+
+variables:
+  trmnl:
+    user:
+      name: Robert
+    plugin_settings:
+      instance_name: Hedgehog Fit
