@@ -2,3 +2,4 @@
 *.log
 .worktrees/
 _build/
+tmp/
