@@ -17,7 +17,7 @@ The plugin exposes these custom fields in the TRMNL dashboard:
 | Field | Key | Type | Options / notes |
 |-------|-----|------|------|
 | Intensität | `intensitaet` | select | `Diskret` (only discreet desk moves), `Normal` (+ visible office gymnastics), `Volle Bandbreite` (everything). Default: `voll`. |
-| Bild-Basis-URL | `bild_basis_url` | url | Base URL of the web server hosting the 20 hedgehog images (trailing slash). |
+| Bild-Basis-URL | `bild_basis_url` | url | Optional. Base URL hosting the 20 hedgehog images (trailing slash). Leave empty to use the default GitHub Pages-hosted images. |
 | Anrede (form of address) | `anrede` | select | Neutral, Weiblich, Männlich |
 
 **Intensität** filters which exercises can appear: `diskret` shows only the discreet ones, `normal` adds the visible-but-harmless ones, `voll` allows everything.
@@ -26,7 +26,13 @@ The plugin exposes these custom fields in the TRMNL dashboard:
 
 ## Images
 
-The 20 hedgehog images are served from an external web server, not embedded. Set **Bild-Basis-URL** to the directory that contains the files; the plugin appends each exercise's filename (`01-schulterkreisen.png` … `20-ganzkoerper-streckung.png`). The image files live in [`docs/assets/uebungen/`](docs/assets/uebungen/) — upload that folder's contents to your server and point the field at it.
+The 20 hedgehog images are not embedded; they are loaded by URL. The image files live in [`docs/assets/uebungen/`](docs/assets/uebungen/) and are published via **GitHub Pages** (served from the `main` branch's `/docs` folder) at:
+
+```
+https://shostakovich.github.io/hedgehog-fit/assets/uebungen/
+```
+
+That URL is the built-in default, so the plugin works out of the box with no configuration. To host the images elsewhere, set **Bild-Basis-URL** to the directory that contains the files; the plugin appends each exercise's filename (`01-schulterkreisen.png` … `20-ganzkoerper-streckung.png`).
 
 ## Implemented sizes
 
