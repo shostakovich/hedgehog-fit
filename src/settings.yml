@@ -164,8 +164,8 @@ custom_fields:
   - keyname: bild_basis_url
     field_type: url
     name: Bild-Basis-URL
-    description: Basis-URL deines Webservers, unter dem die Igel-Bilder liegen (mit Slash am Ende)
-    placeholder: https://deinserver.de/hedgehog-fit/igel/
+    description: Basis-URL, unter dem die Igel-Bilder liegen (mit Slash am Ende). Leer lassen für die per GitHub Pages gehosteten Standardbilder.
+    placeholder: https://shostakovich.github.io/hedgehog-fit/assets/uebungen/
     optional: true
   - keyname: anrede
     field_type: select
