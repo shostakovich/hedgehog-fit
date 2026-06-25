@@ -1,20 +1,32 @@
 # Hedgehog Fit
 
-A private [TRMNL](https://usetrmnl.com) e-ink plugin. On every refresh it shows an 80s-fitness-video hedgehog — sweatband, leg-warmers — with a cheeky German motivational saying nudging you into a small exercise. A random pose and matching saying are picked on each refresh.
+A private [TRMNL](https://usetrmnl.com) e-ink plugin. On every refresh it shows an 80s-fitness-video hedgehog — sweatband, leg-warmers — with a cheeky German motivational saying nudging you into a small exercise. An exercise and a matching saying are picked on each refresh.
 
 ## What it shows
 
-Six poses are defined (Planke, Liegestütze, Bein-Dehnung, Aufwärmen, Sitz-Dehnung, Bizeps). Each pose has four possible sayings. The plugin picks a pose and a saying deterministically from the UTC timestamp, so the display changes with each refresh without requiring state.
+Twenty office-friendly bodyweight exercises are defined, evenly spread across **mobilisation**, **strength** and **stretching** (each takes under a minute). Every exercise has a name, a short description, a matching hedgehog image and three possible sayings. The plugin picks an exercise and a saying deterministically from the UTC timestamp, so the display changes with each refresh without requiring state.
+
+Each exercise is tagged with an intensity **level** (`diskret`, `normal`, `voll`) so the user can limit how conspicuous the suggestions get (see below).
+
+The exercise/image reference lives in [`docs/uebungen-referenz.md`](docs/uebungen-referenz.md) (rendered overview: [`docs/uebungen-referenz.html`](docs/uebungen-referenz.html)); the sayings in [`docs/uebungen-texte.md`](docs/uebungen-texte.md).
 
 ## Plugin configuration
 
-The plugin exposes one custom field in the TRMNL dashboard:
+The plugin exposes these custom fields in the TRMNL dashboard:
 
-| Field | Key | Options |
-|-------|-----|---------|
-| Anrede (form of address) | `anrede` | Neutral, Weiblich, Männlich |
+| Field | Key | Type | Options / notes |
+|-------|-----|------|------|
+| Intensität | `intensitaet` | select | `Diskret` (only discreet desk moves), `Normal` (+ visible office gymnastics), `Volle Bandbreite` (everything). Default: `voll`. |
+| Bild-Basis-URL | `bild_basis_url` | url | Base URL of the web server hosting the 20 hedgehog images (trailing slash). |
+| Anrede (form of address) | `anrede` | select | Neutral, Weiblich, Männlich |
 
-Setting **Weiblich** or **Männlich** causes the hedgehog to insert a gendered term of address (e.g. "Süße", "Großer") into sayings that have an `{ANR}` placeholder. Selecting **Neutral** (the default) leaves those slots empty.
+**Intensität** filters which exercises can appear: `diskret` shows only the discreet ones, `normal` adds the visible-but-harmless ones, `voll` allows everything.
+
+**Anrede** — setting **Weiblich** or **Männlich** causes the hedgehog to insert a gendered term of address (e.g. "Süße", "Großer") into sayings that have an `{ANR}` placeholder. Selecting **Neutral** (the default) leaves those slots empty.
+
+## Images
+
+The 20 hedgehog images are served from an external web server, not embedded. Set **Bild-Basis-URL** to the directory that contains the files; the plugin appends each exercise's filename (`01-schulterkreisen.png` … `20-ganzkoerper-streckung.png`). The image files live in [`docs/assets/uebungen/`](docs/assets/uebungen/) — upload that folder's contents to your server and point the field at it.
 
 ## Implemented sizes
 
@@ -23,38 +35,22 @@ Only the **full** size (800x480) is implemented in `src/full.liquid`. The other 
 ## Requirements
 
 - Ruby **4.0.5** (pinned via `.ruby-version`)
-- The [`trmnl_preview`](https://rubygems.org/gems/trmnl_preview) gem
-
-Install the preview gem:
-
-```bash
-gem install trmnl_preview
-```
+- The [`trmnl_preview`](https://rubygems.org/gems/trmnl_preview) gem (`gem install trmnl_preview`)
 
 ## Local preview
 
 ```bash
-trmnlp serve
+trmnlp serve     # dev server at http://127.0.0.1:4567/full
+trmnlp build     # write static HTML to _build/
+trmnlp lint      # check against TRMNL best practices
 ```
 
-Then open <http://127.0.0.1:4567/full> to see the rendered full-size layout.
-
-The server watches `src/` and `.trmnlp.yml` and reloads on changes. Preview variables (user name, `anrede`, instance name) are configured in `.trmnlp.yml`.
-
-## Regenerating images
-
-The six hedgehog images (`src/assets/igel-1.png` ... `igel-6.png`) are downscaled grayscale PNGs. They are embedded as base64 data-URIs inside `src/shared.liquid` so they render on-device without any external HTTP requests (device network requests can fail or be slow).
-
-`src/shared.liquid` is **generated** — never hand-edit it. After changing any file in `src/assets/`, regenerate it:
-
-```bash
-./bin/encode-images.sh
-```
+For local preview the variables (user name, `anrede`, `intensitaet`, instance name) are configured in `.trmnlp.yml`. To see real images locally, set `bild_basis_url` there to a reachable URL.
 
 ## Content and data
 
-All plugin content lives in `src/settings.yml` under `static_data`. The plugin strategy is `static`, so the JSON is merged as template variables on every render. Poses, sayings, and the form-of-address pools are all defined there. To add a pose, a saying, or a new form-of-address term, edit `src/settings.yml`.
+All plugin content lives in `src/settings.yml` under `static_data`. The plugin strategy is `static`, so the JSON is merged as template variables on every render. Exercises (name, level, image filename, description, sayings) and the form-of-address pools are all defined there. To add/edit an exercise or saying, edit `src/settings.yml`.
 
 ## Development notes
 
-**Template files (`src/*.liquid`) must be ASCII-only.** Liquid reads template sources as US-ASCII and rejects non-ASCII bytes with `Invalid template encoding`. Umlauts, em-dashes, and other non-ASCII characters belong exclusively in `src/settings.yml`, which is read as UTF-8. This is why the generated comment in `src/shared.liquid` uses `--` instead of an em-dash, and why the sayings themselves live in `settings.yml` rather than in the template.
+**Template files (`src/*.liquid`) must be ASCII-only.** Liquid reads template sources as US-ASCII and rejects non-ASCII bytes with `Invalid template encoding`. Umlauts, em-dashes, and other non-ASCII characters belong exclusively in `src/settings.yml`, which is read as UTF-8. Keep comments and markup in the `.liquid` files plain ASCII; all German text with umlauts lives in `settings.yml`.

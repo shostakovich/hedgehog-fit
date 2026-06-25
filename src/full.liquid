@@ -1,18 +1,33 @@
 {%- assign seed = trmnl.system.timestamp_utc | date: "%s" | plus: 0 -%}
-{%- assign pose_count = poses | size -%}
-{%- assign pose_idx = seed | modulo: pose_count -%}
-{%- assign pose = poses[pose_idx] -%}
-{%- assign saying_count = pose.sayings | size -%}
-{%- assign say_idx = seed | divided_by: 7 | modulo: saying_count -%}
-{%- assign saying = pose.sayings[say_idx] -%}
 
+{%- comment -%} Intensity filter: build the pool based on the selected level {%- endcomment -%}
+{%- assign lvl = trmnl.plugin_settings.custom_fields_values.intensitaet | default: "voll" -%}
+{%- assign pool = uebungen | where: "level", "diskret" -%}
+{%- if lvl == "normal" or lvl == "voll" -%}
+  {%- assign pool_normal = uebungen | where: "level", "normal" -%}
+  {%- assign pool = pool | concat: pool_normal -%}
+{%- endif -%}
+{%- if lvl == "voll" -%}
+  {%- assign pool_voll = uebungen | where: "level", "voll" -%}
+  {%- assign pool = pool | concat: pool_voll -%}
+{%- endif -%}
+
+{%- assign ex_count = pool | size -%}
+{%- assign ex_idx = seed | modulo: ex_count -%}
+{%- assign ex = pool[ex_idx] -%}
+
+{%- assign saying_count = ex.sayings | size -%}
+{%- assign say_idx = seed | divided_by: 7 | modulo: saying_count -%}
+{%- assign saying = ex.sayings[say_idx] -%}
+
+{%- comment -%} Optionale Anrede-Einblendung {%- endcomment -%}
 {%- assign anrede_value = trmnl.plugin_settings.custom_fields_values.anrede | default: "neutral" -%}
 {%- assign anr = "" -%}
 {%- unless anrede_value == "neutral" -%}
-  {%- assign pool = anrede[anrede_value] -%}
-  {%- if pool and pool.size > 0 -%}
-    {%- assign anr_idx = seed | divided_by: 13 | modulo: pool.size -%}
-    {%- assign anr = ", " | append: pool[anr_idx] -%}
+  {%- assign anr_pool = anrede[anrede_value] -%}
+  {%- if anr_pool and anr_pool.size > 0 -%}
+    {%- assign anr_idx = seed | divided_by: 13 | modulo: anr_pool.size -%}
+    {%- assign anr = ", " | append: anr_pool[anr_idx] -%}
   {%- endif -%}
 {%- endunless -%}
 {%- assign text = saying | replace: "{ANR}", anr -%}
@@ -20,11 +35,12 @@
 <div class="layout">
   <div class="grid">
     <div class="col--span-7 flex flex--col flex--center-y flex--left gap">
-      <span class="title title--large" data-clamp="4">{{ text }}</span>
-      <span class="label label--small label--gray text--uppercase">{{ pose.label }}</span>
+      <span class="title title--large" data-clamp="2">{{ ex.name }}</span>
+      <span class="title" data-clamp="3">{{ ex.desc }}</span>
+      <span class="title title--small" data-clamp="3">{{ text }}</span>
     </div>
     <div class="col--span-5 flex flex--center">
-      <img class="image image-dither image--contain h--72" src="{{ hog_images[pose_idx] }}">
+      <img class="image image-dither image--contain h--72" src="{{ img_base }}{{ ex.img }}">
     </div>
   </div>
 </div>

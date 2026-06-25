@@ -4,7 +4,8 @@ watch:
   - .trmnlp.yml
 
 custom_fields:
-  anrede: weiblich
+  anrede: männlich
+  intensitaet: voll
 
 time_zone: Europe/Berlin
 
