@@ -13,11 +13,13 @@
 {%- endif -%}
 
 {%- assign ex_count = pool | size -%}
-{%- assign ex_idx = seed | modulo: ex_count -%}
+{%- comment -%} Seed mischen: blankes timestamp % ex_count ist bei minuten-getakteten Refreshes konstant (jedes Vielfache von 60 ist auch ein Vielfaches von 20), sonst bleibt immer dieselbe Übung stehen. Knuth-Multiplikativhash, danach positionsweise drei unabhängige Indizes extrahieren. {%- endcomment -%}
+{%- assign rnd = seed | times: 2654435761 | modulo: 2147483647 -%}
+{%- assign ex_idx = rnd | modulo: ex_count -%}
 {%- assign ex = pool[ex_idx] -%}
 
 {%- assign saying_count = ex.sayings | size -%}
-{%- assign say_idx = seed | divided_by: 7 | modulo: saying_count -%}
+{%- assign say_idx = rnd | divided_by: ex_count | modulo: saying_count -%}
 {%- assign saying = ex.sayings[say_idx] -%}
 
 {%- comment -%} Optionale Anrede-Einblendung {%- endcomment -%}
@@ -26,7 +28,8 @@
 {%- unless anrede_value == "neutral" -%}
   {%- assign anr_pool = anrede[anrede_value] -%}
   {%- if anr_pool and anr_pool.size > 0 -%}
-    {%- assign anr_idx = seed | divided_by: 13 | modulo: anr_pool.size -%}
+    {%- assign anr_div = ex_count | times: saying_count -%}
+    {%- assign anr_idx = rnd | divided_by: anr_div | modulo: anr_pool.size -%}
     {%- assign anr = ", " | append: anr_pool[anr_idx] -%}
   {%- endif -%}
 {%- endunless -%}
