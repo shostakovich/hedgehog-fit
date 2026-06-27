@@ -1,5 +1,3 @@
-{%- assign seed = trmnl.system.timestamp_utc | date: "%s" | plus: 0 -%}
-
 {%- comment -%} Intensity filter: build the pool based on the selected level {%- endcomment -%}
 {%- assign lvl = trmnl.plugin_settings.custom_fields_values.intensitaet | default: "voll" -%}
 {%- assign pool = uebungen | where: "level", "diskret" -%}
@@ -13,8 +11,8 @@
 {%- endif -%}
 
 {%- assign ex_count = pool | size -%}
-{%- comment -%} Seed mischen: blankes timestamp % ex_count ist bei minuten-getakteten Refreshes konstant (jedes Vielfache von 60 ist auch ein Vielfaches von 20), sonst bleibt immer dieselbe Übung stehen. Knuth-Multiplikativhash, danach positionsweise drei unabhängige Indizes extrahieren. {%- endcomment -%}
-{%- assign rnd = seed | times: 2654435761 | modulo: 2147483647 -%}
+{%- comment -%} Random seed from render nanoseconds (not refresh-cadence-locked). The times step spreads coarse-resolution clocks across all digits, otherwise modulo collapses to a single index when nanoseconds end in ...000. {%- endcomment -%}
+{%- assign rnd = "now" | date: "%N" | times: 2654435761 | modulo: 2147483647 -%}
 {%- assign ex_idx = rnd | modulo: ex_count -%}
 {%- assign ex = pool[ex_idx] -%}
 
@@ -22,7 +20,7 @@
 {%- assign say_idx = rnd | divided_by: ex_count | modulo: saying_count -%}
 {%- assign saying = ex.sayings[say_idx] -%}
 
-{%- comment -%} Optionale Anrede-Einblendung {%- endcomment -%}
+{%- comment -%} Optional salutation insertion {%- endcomment -%}
 {%- assign anrede_value = trmnl.plugin_settings.custom_fields_values.anrede | default: "neutral" -%}
 {%- assign anr = "" -%}
 {%- unless anrede_value == "neutral" -%}
