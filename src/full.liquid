@@ -1,19 +1,8 @@
 {%- assign seed = trmnl.system.timestamp_utc | date: "%s" | plus: 0 -%}
 
-{%- comment -%} Intensity filter: build the pool based on the selected level {%- endcomment -%}
-{%- assign lvl = trmnl.plugin_settings.custom_fields_values.intensitaet | default: "voll" -%}
-{%- assign pool = uebungen | where: "level", "diskret" -%}
-{%- if lvl == "normal" or lvl == "voll" -%}
-  {%- assign pool_normal = uebungen | where: "level", "normal" -%}
-  {%- assign pool = pool | concat: pool_normal -%}
-{%- endif -%}
-{%- if lvl == "voll" -%}
-  {%- assign pool_voll = uebungen | where: "level", "voll" -%}
-  {%- assign pool = pool | concat: pool_voll -%}
-{%- endif -%}
-
+{%- assign pool = uebungen -%}
 {%- assign ex_count = pool | size -%}
-{%- comment -%} Seed mischen: blankes timestamp % ex_count ist bei minuten-getakteten Refreshes konstant (jedes Vielfache von 60 ist auch ein Vielfaches von 20), sonst bleibt immer dieselbe Übung stehen. Knuth-Multiplikativhash, danach positionsweise drei unabhängige Indizes extrahieren. {%- endcomment -%}
+{%- comment -%} Mix the seed: a bare timestamp % ex_count is constant across minute-aligned refreshes (every multiple of 60 is also a multiple of 20), so the same exercise would stay up. Knuth multiplicative hash, then extract three independent indices positionally. {%- endcomment -%}
 {%- assign rnd = seed | times: 2654435761 | modulo: 2147483647 -%}
 {%- assign ex_idx = rnd | modulo: ex_count -%}
 {%- assign ex = pool[ex_idx] -%}

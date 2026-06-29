@@ -5,7 +5,6 @@ watch:
 
 custom_fields:
   anrede: männlich
-  intensitaet: voll
 
 time_zone: Europe/Berlin
 
