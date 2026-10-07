@@ -1,136 +1,141 @@
-# Hedgehog Fit – Übungen, Beschreibungen & Sprüche
+# Hedgehog Fit – Übungen, Anleitungen & Sprüche
 
-Pro Übung: **Name** · **kurze Beschreibung** · **witzige Sprüche** (Trainer-Ton).
-`{ANR}` = optionale Anrede-Einblendung (z.B. „, Champion").
+Generiert aus `src/settings.yml` (dort pflegen). Pro Übung: **Name** · Dosis · Anleitung · drei Sprüche.
+`{ANR}` = optionale Anrede („, Igelheldin“ / „, Igelheld“), entfällt bei „Neutral“.
+
+**Anrede-Pools**
+
+- weiblich: Igelheldin, Stachelchefin, Igelkönigin, Igelprinzessin, Stulpenkönigin, Stachelqueen
+- männlich: Igelheld, Stachelchef, Igelkönig, Igelprinz, Stulpenkönig, Stachelchamp
 
 ---
 
 ## 🤸 Mobilisation
 
-### 1. Schulterkreisen
-*Schultern langsam nach hinten kreisen, mit dem Atem mitgehen.*
-- „Schultern kreisen lassen{ANR} — and back, and back! Die Verspannung hat heute frei."
-- „Erst die Stacheln sortieren, dann den Tag regieren!"
-- „Kreisen, nicht hochziehen{ANR} — die Ohren bleiben, wo sie sind!"
+### 1. Schulterkreisen · 10× nach hinten
+*Hände zu den Schultern, mit den Ellbogen große Kreise nach hinten.*
+- „And back, and back{ANR}! Die Verspannung hat heute frei.“
+- „Erst die Stacheln sortieren, dann den Tag regieren!“
+- „Schultern weg von den Ohren – die sind kein Parkplatz{ANR}!“
 
-### 2. Nacken-/Kopfdrehung (im Sitzen)
-*Im Sitzen den Kopf langsam zu jeder Seite drehen, Schultern locker lassen.*
-- „Schau nach links, schau nach rechts — und sag dem Nacken Tschüss zum Stress!"
-- „Langsam{ANR}, wir drehen den Kopf, nicht durch!"
-- „Einmal umschauen, ob das Wochenende schon kommt. And turn!"
+### 2. Kopfdrehung · 5× je Seite
+*Kopf langsam nach links und rechts drehen, Schultern bleiben locker.*
+- „Links, rechts, links – wie beim Tennis, nur ohne Schläger!“
+- „Langsam{ANR}, wir drehen den Kopf, nicht durch!“
+- „Einmal umschauen, ob das Wochenende schon kommt. And turn!“
 
-### 3. Katze-Kuh im Sitzen
-*Im Sitzen die Wirbelsäule abwechselnd runden (Katze) und strecken (Kuh).*
-- „Katzenbuckel rein, Brust raus — and round, and long!"
-- „Erst Katze, dann Kuh — der Rücken sagt Danke, muh!"
-- „Wirbel für Wirbel aufwecken{ANR}, der Tag kann kommen."
+### 3. Katze-Kuh · 8× im Wechsel
+*Im Sitzen: Rücken rund machen (Katze), dann Brust raus (Kuh).*
+- „And round, and proud! Dein Rücken war lang genug ein Fragezeichen.“
+- „Erst Katze, dann Kuh. Der Rücken sagt: Danke, muh!“
+- „Miau, muh, miau{ANR} – der Bauernhof im Bürostuhl!“
 
-### 4. Sitz-Drehung
-*Oberkörper zur Seite drehen, eine Hand an der Stuhllehne.*
-- „Dreh dich um{ANR} — nein, nicht zum Kühlschrank, zur Lehne!"
-- „And twist! Der Bürostuhl wird heute zum Sportgerät."
-- „Einmal auswringen wie ein Spüllappen — tut gut, oder?"
+### 4. Sitz-Drehung · 3 Atemzüge je Seite
+*Füße fest am Boden, Oberkörper zur Lehne drehen, Seite wechseln.*
+- „Dreh dich um{ANR} – nein, nicht zum Kühlschrank, zur Lehne!“
+- „And twist! Der Bürostuhl wird heute zum Sportgerät.“
+- „Die Hüfte bleibt sitzen{ANR}, oben tanzt die Disco!“
 
-### 5. Handgelenks- & Fingerkreisen
-*Handgelenke kreisen, dann Finger spreizen — gegen die Maus-Steifheit.*
-- „Die Tipp-Pfoten lockern{ANR} — gleich flutscht die Tastatur!"
-- „Finger spreizen, Handgelenk kreisen — and shake, and shake!"
-- „Zehn kleine Stachel-Finger wollen auch mal Pause."
+### 5. Handkreisen · 10× je Richtung
+*Finger weit spreizen, ausschütteln, dann die Handgelenke kreisen.*
+- „Die Tipp-Pfoten lockern{ANR} – gleich flutscht die Tastatur!“
+- „And shake, and shake! Raus mit dem Maus-Krampf.“
+- „Zehn kleine Finger wollen auch mal Feierabend!“
 
-### 6. Armkreisen
-*Große Kreise mit gestreckten Armen, vorwärts und rückwärts.*
-- „Arme raus, große Kreise{ANR} — wie ein Windrad mit Schweißband!"
-- „And circle! Vorwärts für die Energie, rückwärts für die Haltung."
-- „Flügel ausfahren — fliegen lernen wir nächste Woche."
+### 6. Armkreisen · 10× vor, 10× zurück
+*Arme seitlich gestreckt, große Kreise vorwärts, dann rückwärts.*
+- „Windrad mit Schweißband{ANR} – and circle, and circle!“
+- „And circle! Vorwärts für Energie, rückwärts für Haltung.“
+- „Flügel ausfahren! Fliegen lernen wir nächste Woche.“
 
-### 7. Marschieren / Knie heben
-*Auf der Stelle marschieren, Knie abwechselnd hoch ziehen.*
-- „Knie hoch, Laune hoch — and march, and march!"
-- „Marschier den Kaffee-Crash einfach weg{ANR}!"
-- „Auf der Stelle, aber mit Stil — der Igel führt die Parade."
+### 7. Marschieren · 30 Sek.
+*Auf der Stelle marschieren, Knie hoch, Arme schwingen mit.*
+- „Knie hoch, Laune hoch – and march, and march!“
+- „Marschier den Kaffee-Crash einfach weg{ANR}!“
+- „Links, zwo, drei, vier! Der Igel führt die Parade.“
 
 ---
 
 ## 💪 Kraft
 
-### 8. Po-Anspannen (Glute Squeeze)
-*Im Sitzen die Gesäßmuskeln fest anspannen, halten, lösen.*
-- „Po anspannen{ANR} — keiner sieht's, alle spüren's. Geheimwaffe!"
-- „Anspannen, halten — drei, zwei, eins, loslassen. Wer hat's gemerkt? Niemand!"
-- „Der heimlichste Muskel-Move im Büro. Pssst{ANR}!"
+### 8. Po-Anspannen · 5× je 5 Sek.
+*Im Sitzen den Po fest anspannen, kurz halten, wieder lösen.*
+- „Keiner sieht's, nur du spürst's{ANR}. Geheimwaffe Po!“
+- „And squeeze, and hold! Wer hat's gemerkt? Niemand.“
+- „Der heimlichste Muskel-Move im Büro. Pssst{ANR}!“
 
-### 9. Bizeps (Curls)
-*Unterarme abwechselnd zur Schulter beugen — gern mit Wasserflasche oder Tasse als Mini-Gewicht.*
-- „And curl, and curl{ANR} — die Ärmchen werden zu Ärmeln!"
-- „Heute leicht, morgen Legende. Pump die Stacheln auf!"
-- „Bizeps wie ein Igel im Frühling — voll erblüht{ANR}!"
+### 9. Bizeps-Curls · 10×
+*Ellbogen am Körper lassen, Fäuste zu den Schultern heben und senken.*
+- „And curl, and curl{ANR} – aus Ärmchen werden Arme!“
+- „Heute leicht, morgen Legende. Pump die Stacheln auf!“
+- „Wasserflasche schnappen{ANR}, fertig ist die Hantel!“
 
-### 10. Kniebeugen
-*Klassische Kniebeuge, der Stuhl hinter dir als Tiefen-Referenz.*
-- „Runter zum Stuhl, aber nicht setzen{ANR} — and squat, and up!"
-- „Po nach hinten, Brust nach vorn — der Igel macht's vor!"
-- „Zehn Kniebeugen jetzt, ein zufriedener Stachel-Knack später. Lohnt sich!"
+### 10. Kniebeugen · 10×
+*Po nach hinten, bis kurz über den Stuhl, Fersen bleiben am Boden.*
+- „Runter zum Stuhl, aber nicht setzen{ANR} – and squat, and up!“
+- „Five, six, seven, eight! Der Stuhl darf nur zugucken.“
+- „Zehn Stück{ANR}, dann ist der nächste Keks verdient!“
 
-### 11. Ausfallschritte (Lunges)
-*Ein Bein nach vorne, Oberkörper gerade absenken, dann wechseln.*
-- „Großer Schritt für den Igel{ANR} — and lunge, and up!"
-- „Vorderes Knie über dem Knöchel — wir sind ja Profis!"
-- „Ein Ausfallschritt vor, kein Schritt zurück. Los{ANR}!"
+### 11. Ausfallschritte · 5× je Bein
+*Großer Schritt nach vorn, Knie über dem Knöchel, Bein wechseln.*
+- „And lunge, and up{ANR} – die Beine machen heute Karriere!“
+- „Wackeln erlaubt, Aufgeben nicht. And again!“
+- „Ein großer Schritt für dich{ANR}, ein riesiger für den Po!“
 
-### 12. Tisch-Liegestütze
-*Hände auf die Tischkante, Körper schräg, Brust zur Kante senken.*
-- „Drück dich vom Schreibtisch weg{ANR} — and push, and push!"
-- „Der Tisch hält viel aus — heute auch dich!"
-- „Brust zur Kante, Stacheln stramm — schräg ist das neue stark!"
+### 12. Tisch-Liegestütze · 10×
+*Hände an einen festen Tisch, Körper gerade, Brust zur Kante senken.*
+- „Drück dich vom Schreibtisch weg{ANR} – and push, and push!“
+- „Heute drückst du den Schreibtisch, nicht umgekehrt!“
+- „Stacheln stramm – schräg ist das neue stark!“
 
-### 13. Wall-Sit
-*Mit dem Rücken an die Wand „setzen", Oberschenkel waagerecht, halten.*
-- „Sitzen ohne Stuhl{ANR} — die Wand glaubt, du machst Pause. Tust du nicht!"
-- „Oberschenkel brennen? Das ist der Applaus der Muskeln!"
-- „Halten, halten, haaalten — noch zehn Sekunden, Stachelheld!"
+### 13. Wandsitz · 30 Sek.
+*Rücken an die Wand, Oberschenkel waagerecht, Knie über den Knöcheln.*
+- „Sitzen ohne Stuhl{ANR}. Pause? Denkste!“
+- „Feel the burn! Die Oberschenkel klatschen schon Beifall.“
+- „Halten, halten, haaalten{ANR} – Luftstuhl deluxe!“
 
 ---
 
 ## 🧘 Dehnung
 
-### 14. Nackendehnung zur Seite
-*Kopf zur Schulter neigen, mit der Hand sanft nachziehen.*
-- „Ohr zur Schulter{ANR} — sanft, wir sind kein Gummiband!"
-- „Eine Seite, dann die andere — der Nacken atmet auf."
-- „Kopf neigen, Sorgen abgießen. And breathe!"
+### 14. Nackendehnung · 20 Sek. je Seite
+*Ohr Richtung Schulter neigen, Hand nur auflegen, nicht ziehen.*
+- „Ohr zur Schulter{ANR} – sanft, wir sind kein Gummiband!“
+- „Nicht nur die Schokoladenseite dehnen – beide bitte!“
+- „Kopf zur Seite, Sorgen zur Seite. And breathe!“
 
-### 15. Brustöffner
-*Finger hinter dem Rücken verschränken, Brust raus, Schultern zurück.*
-- „Brust raus, Schultern zurück{ANR} — stolz wie ein Stachel-Pfau!"
-- „Pfoten hinten verschränken und öffnen — der Bildschirm-Buckel verschwindet."
-- „Mach dich breit{ANR} — die Welt darf den ganzen Igel sehen!"
+### 15. Brustöffner · 3 tiefe Atemzüge
+*Hände in die Hüften, Ellbogen zurück, Brust raus, Kinn leicht hoch.*
+- „And open{ANR}! Stolz wie ein Stachel-Pfau.“
+- „Tschüss, Bildschirm-Buckel – hallo, Heldenbrust!“
+- „Mach dich breit{ANR}! Die Welt darf den ganzen Igel sehen.“
 
-### 16. Vorbeuge im Sitzen
-*Über die Knie beugen, Kopf und Arme locker hängen lassen.*
-- „Kopf hängen lassen{ANR} — aber nur körperlich, der Geist bleibt oben!"
-- „Lass mal alles baumeln — der Rücken rollt sich aus."
-- „Tief vorbeugen, tief durchatmen — and relax."
+### 16. Vorbeuge · 5 Atemzüge
+*Auf der Stuhlkante den Oberkörper hängen lassen, langsam aufrollen.*
+- „Kopf hängen lassen{ANR} – aber nur körperlich!“
+- „Wirbel für Wirbel hoch – der Kreislauf mag's gemütlich!“
+- „Tief runter, tief durchatmen. And relax!“
 
-### 17. Figure-4 im Sitzen
-*Knöchel aufs gegenüberliegende Knie legen, leicht vorbeugen (Hüfte/Po).*
-- „Knöchel aufs Knie, eine Vier bauen{ANR} — die Hüfte schnurrt!"
-- „Sieht schick aus, fühlt sich besser an. Leicht vorlehnen!"
-- „Po-Dehnung im Sitzen — schlau und unauffällig{ANR}."
+### 17. Figur-4-Dehnung · 20 Sek. je Seite
+*Im Sitzen einen Knöchel aufs andere Knie, Rücken gerade, vorlehnen.*
+- „Eine Vier bauen{ANR} – die Hüfte schnurrt!“
+- „And lean! Sieht nach Yoga aus, ist aber Büro.“
+- „Po-Dehnung im Sitzen{ANR} – das Meeting merkt nix!“
 
-### 18. Unterarm- & Handgelenksdehnung
-*Einen Arm vorstrecken, mit der anderen Hand die Finger sanft zurückbiegen.*
-- „Arm raus, Finger sanft zurück{ANR} — die Maus-Hand kriegt Urlaub."
-- „Erst die eine Pfote, dann die andere — fair bleibt fair!"
-- „Dehnen, nicht überdrehen — wir wollen ja noch tippen."
+### 18. Handgelenksdehnung · 15 Sek. je Hand
+*Arm vorstrecken, Finger mit der anderen Hand sanft zurückbiegen.*
+- „Die Maus-Hand kriegt Urlaub{ANR} – and stretch!“
+- „Stoppschild-Pfote! Die Tastatur darf kurz warten.“
+- „Dehnen, nicht überdrehen. Wir wollen ja noch tippen!“
 
-### 19. Seitneige (Side Bend)
-*Einen Arm hoch über den Kopf, Oberkörper zur Gegenseite dehnen.*
-- „Arm hoch, zur Seite neigen{ANR} — and stretch! Lang wie ein Igel im Gähnen."
-- „Einmal eine schöne Banane machen — krumm war nie so gesund!"
-- „Flanke dehnen, Luft holen — die andere Seite will auch!"
+### 19. Seitneige · 3 Atemzüge je Seite
+*Einen Arm über den Kopf, Oberkörper zur Gegenseite neigen.*
+- „Arm hoch und rüber{ANR} – and stretch, and stretch!“
+- „Einmal eine schöne Banane machen! Krumm war nie so gesund.“
+- „Die andere Seite ist schon ganz neidisch. And switch!“
 
-### 20. Ganzkörper-Streckung
-*Auf die Zehenspitzen, beide Arme weit nach oben strecken, langmachen.*
-- „Mach dich lang{ANR} — auf die Zehen, Arme zum Himmel!"
-- „Strecken und gähnen erlaubt — der ganze Igel wird wach!"
-- „Einmal so groß wie möglich — and reach! Du wächst förmlich."
+### 20. Ganzkörper-Streckung · 3× je 5 Sek.
+*Auf die Zehenspitzen, beide Arme weit nach oben strecken.*
+- „Mach dich lang{ANR} – die Bürodecke ist das Limit!“
+- „Strecken und gähnen erlaubt: Der ganze Igel wird wach!“
+- „And reach, and reach! Hallo, Deckenlampe!“

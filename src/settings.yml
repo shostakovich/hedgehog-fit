@@ -5,157 +5,157 @@ framework_version: latest
 static_data: |
   {
     "uebungen": [
-      { "name": "Schulterkreisen", "img": "01-schulterkreisen.png",
-        "desc": "Schultern langsam nach hinten kreisen, mit dem Atem mitgehen.",
+      { "name": "Schulterkreisen", "img": "01-schulterkreisen.png", "kat": "Mobilisation", "dosis": "10× nach hinten",
+        "desc": "Hände zu den Schultern, mit den Ellbogen große Kreise nach hinten.",
         "sayings": [
-          "Schultern kreisen lassen{ANR} — and back, and back! Die Verspannung hat heute frei.",
+          "And back, and back{ANR}! Die Verspannung hat heute frei.",
           "Erst die Stacheln sortieren, dann den Tag regieren!",
-          "Kreisen, nicht hochziehen{ANR} — die Ohren bleiben, wo sie sind!"
+          "Schultern weg von den Ohren\u00a0– die sind kein Parkplatz{ANR}!"
         ]},
-      { "name": "Nacken-Drehung", "img": "02-nacken-kopfdrehung.png",
-        "desc": "Im Sitzen den Kopf langsam zu jeder Seite drehen, Schultern locker.",
+      { "name": "Kopfdrehung", "img": "02-nacken-kopfdrehung.png", "kat": "Mobilisation", "dosis": "5× je Seite",
+        "desc": "Kopf langsam nach links und rechts drehen, Schultern bleiben locker.",
         "sayings": [
-          "Schau nach links, schau nach rechts — und sag dem Nacken Tschüss zum Stress!",
+          "Links, rechts, links\u00a0– wie beim Tennis, nur ohne Schläger!",
           "Langsam{ANR}, wir drehen den Kopf, nicht durch!",
           "Einmal umschauen, ob das Wochenende schon kommt. And turn!"
         ]},
-      { "name": "Katze-Kuh", "img": "03-katze-kuh.png",
-        "desc": "Im Sitzen die Wirbelsäule abwechselnd runden (Katze) und strecken (Kuh).",
+      { "name": "Katze-Kuh", "img": "03-katze-kuh.png", "kat": "Mobilisation", "dosis": "8× im Wechsel",
+        "desc": "Im Sitzen: Rücken rund machen (Katze), dann Brust raus (Kuh).",
         "sayings": [
-          "Katzenbuckel rein, Brust raus — and round, and long!",
-          "Erst Katze, dann Kuh — der Rücken sagt Danke, muh!",
-          "Wirbel für Wirbel aufwecken{ANR}, der Tag kann kommen."
+          "And round, and proud! Dein Rücken war lang genug ein Fragezeichen.",
+          "Erst Katze, dann Kuh. Der Rücken sagt: Danke, muh!",
+          "Miau, muh, miau{ANR}\u00a0– der Bauernhof im Bürostuhl!"
         ]},
-      { "name": "Sitz-Drehung", "img": "04-sitz-drehung.png",
-        "desc": "Oberkörper zur Seite drehen, eine Hand an der Stuhllehne.",
+      { "name": "Sitz-Drehung", "img": "04-sitz-drehung.png", "kat": "Mobilisation", "dosis": "3 Atemzüge je Seite",
+        "desc": "Füße fest am Boden, Oberkörper zur Lehne drehen, Seite wechseln.",
         "sayings": [
-          "Dreh dich um{ANR} — nein, nicht zum Kühlschrank, zur Lehne!",
+          "Dreh dich um{ANR}\u00a0– nein, nicht zum Kühlschrank, zur Lehne!",
           "And twist! Der Bürostuhl wird heute zum Sportgerät.",
-          "Einmal auswringen wie ein Spüllappen — tut gut, oder?"
+          "Die Hüfte bleibt sitzen{ANR}, oben tanzt die Disco!"
         ]},
-      { "name": "Handgelenks-Kreisen", "img": "05-handgelenk-finger.png",
-        "desc": "Handgelenke kreisen, dann Finger spreizen — gegen die Maus-Steifheit.",
+      { "name": "Handkreisen", "img": "05-handgelenk-finger.png", "kat": "Mobilisation", "dosis": "10× je Richtung",
+        "desc": "Finger weit spreizen, ausschütteln, dann die Handgelenke kreisen.",
         "sayings": [
-          "Die Tipp-Pfoten lockern{ANR} — gleich flutscht die Tastatur!",
-          "Finger spreizen, Handgelenk kreisen — and shake, and shake!",
-          "Zehn kleine Stachel-Finger wollen auch mal Pause."
+          "Die Tipp-Pfoten lockern{ANR}\u00a0– gleich flutscht die Tastatur!",
+          "And shake, and shake! Raus mit dem Maus-Krampf.",
+          "Zehn kleine Finger wollen auch mal Feierabend!"
         ]},
-      { "name": "Armkreisen", "img": "06-armkreisen.png",
-        "desc": "Große Kreise mit gestreckten Armen, vorwärts und rückwärts.",
+      { "name": "Armkreisen", "img": "06-armkreisen.png", "kat": "Mobilisation", "dosis": "10× vor, 10× zurück",
+        "desc": "Arme seitlich gestreckt, große Kreise vorwärts, dann rückwärts.",
         "sayings": [
-          "Arme raus, große Kreise{ANR} — wie ein Windrad mit Schweißband!",
-          "And circle! Vorwärts für die Energie, rückwärts für die Haltung.",
-          "Flügel ausfahren — fliegen lernen wir nächste Woche."
+          "Windrad mit Schweißband{ANR}\u00a0– and circle, and circle!",
+          "And circle! Vorwärts für Energie, rückwärts für Haltung.",
+          "Flügel ausfahren! Fliegen lernen wir nächste Woche."
         ]},
-      { "name": "Marschieren", "img": "07-marschieren.png",
-        "desc": "Auf der Stelle marschieren, Knie abwechselnd hoch ziehen.",
+      { "name": "Marschieren", "img": "07-marschieren.png", "kat": "Mobilisation", "dosis": "30 Sek.",
+        "desc": "Auf der Stelle marschieren, Knie hoch, Arme schwingen mit.",
         "sayings": [
-          "Knie hoch, Laune hoch — and march, and march!",
+          "Knie hoch, Laune hoch\u00a0– and march, and march!",
           "Marschier den Kaffee-Crash einfach weg{ANR}!",
-          "Auf der Stelle, aber mit Stil — der Igel führt die Parade."
+          "Links, zwo, drei, vier! Der Igel führt die Parade."
         ]},
-      { "name": "Po-Anspannen", "img": "08-po-anspannen.png",
-        "desc": "Im Sitzen die Gesäßmuskeln fest anspannen, halten, lösen.",
+      { "name": "Po-Anspannen", "img": "08-po-anspannen.png", "kat": "Kraft", "dosis": "5× je 5 Sek.",
+        "desc": "Im Sitzen den Po fest anspannen, kurz halten, wieder lösen.",
         "sayings": [
-          "Po anspannen{ANR} — keiner sieht's, alle spüren's. Geheimwaffe!",
-          "Anspannen, halten — drei, zwei, eins, loslassen. Wer hat's gemerkt? Niemand!",
+          "Keiner sieht's, nur du spürst's{ANR}. Geheimwaffe Po!",
+          "And squeeze, and hold! Wer hat's gemerkt? Niemand.",
           "Der heimlichste Muskel-Move im Büro. Pssst{ANR}!"
         ]},
-      { "name": "Bizeps", "img": "09-bizeps.png",
-        "desc": "Unterarme abwechselnd zur Schulter beugen — gern mit Wasserflasche als Mini-Gewicht.",
+      { "name": "Bizeps-Curls", "img": "09-bizeps.png", "kat": "Kraft", "dosis": "10×",
+        "desc": "Ellbogen am Körper lassen, Fäuste zu den Schultern heben und senken.",
         "sayings": [
-          "And curl, and curl{ANR} — die Ärmchen werden zu Ärmeln!",
+          "And curl, and curl{ANR}\u00a0– aus Ärmchen werden Arme!",
           "Heute leicht, morgen Legende. Pump die Stacheln auf!",
-          "Bizeps wie ein Igel im Frühling — voll erblüht{ANR}!"
+          "Wasserflasche schnappen{ANR}, fertig ist die Hantel!"
         ]},
-      { "name": "Kniebeugen", "img": "10-kniebeugen.png",
-        "desc": "Klassische Kniebeuge, der Stuhl hinter dir als Tiefen-Referenz.",
+      { "name": "Kniebeugen", "img": "10-kniebeugen.png", "kat": "Kraft", "dosis": "10×",
+        "desc": "Po nach hinten, bis kurz über den Stuhl, Fersen bleiben am Boden.",
         "sayings": [
-          "Runter zum Stuhl, aber nicht setzen{ANR} — and squat, and up!",
-          "Po nach hinten, Brust nach vorn — der Igel macht's vor!",
-          "Zehn Kniebeugen jetzt, ein zufriedener Stachel-Knack später. Lohnt sich!"
+          "Runter zum Stuhl, aber nicht setzen{ANR}\u00a0– and squat, and up!",
+          "Five, six, seven, eight! Der Stuhl darf nur zugucken.",
+          "Zehn Stück{ANR}, dann ist der nächste Keks verdient!"
         ]},
-      { "name": "Ausfallschritte", "img": "11-ausfallschritte.png",
-        "desc": "Ein Bein nach vorne, Oberkörper gerade absenken, dann wechseln.",
+      { "name": "Ausfallschritte", "img": "11-ausfallschritte.png", "kat": "Kraft", "dosis": "5× je Bein",
+        "desc": "Großer Schritt nach vorn, Knie über dem Knöchel, Bein wechseln.",
         "sayings": [
-          "Großer Schritt für den Igel{ANR} — and lunge, and up!",
-          "Vorderes Knie über dem Knöchel — wir sind ja Profis!",
-          "Ein Ausfallschritt vor, kein Schritt zurück. Los{ANR}!"
+          "And lunge, and up{ANR}\u00a0– die Beine machen heute Karriere!",
+          "Wackeln erlaubt, Aufgeben nicht. And again!",
+          "Ein großer Schritt für dich{ANR}, ein riesiger für den Po!"
         ]},
-      { "name": "Tisch-Liegestütze", "img": "12-tisch-liegestuetze.png",
-        "desc": "Hände auf die Tischkante, Körper schräg, Brust zur Kante senken.",
+      { "name": "Tisch-Liegestütze", "img": "12-tisch-liegestuetze.png", "kat": "Kraft", "dosis": "10×",
+        "desc": "Hände an einen festen Tisch, Körper gerade, Brust zur Kante senken.",
         "sayings": [
-          "Drück dich vom Schreibtisch weg{ANR} — and push, and push!",
-          "Der Tisch hält viel aus — heute auch dich!",
-          "Brust zur Kante, Stacheln stramm — schräg ist das neue stark!"
+          "Drück dich vom Schreibtisch weg{ANR}\u00a0– and push, and push!",
+          "Heute drückst du den Schreibtisch, nicht umgekehrt!",
+          "Stacheln stramm\u00a0– schräg ist das neue stark!"
         ]},
-      { "name": "Wall-Sit", "img": "13-wall-sit.png",
-        "desc": "Mit dem Rücken an die Wand „setzen“, Oberschenkel waagerecht, halten.",
+      { "name": "Wandsitz", "img": "13-wall-sit.png", "kat": "Kraft", "dosis": "30 Sek.",
+        "desc": "Rücken an die Wand, Oberschenkel waagerecht, Knie über den Knöcheln.",
         "sayings": [
-          "Sitzen ohne Stuhl{ANR} — die Wand glaubt, du machst Pause. Tust du nicht!",
-          "Oberschenkel brennen? Das ist der Applaus der Muskeln!",
-          "Halten, halten, haaalten — noch zehn Sekunden, Stachelheld!"
+          "Sitzen ohne Stuhl{ANR}. Pause? Denkste!",
+          "Feel the burn! Die Oberschenkel klatschen schon Beifall.",
+          "Halten, halten, haaalten{ANR}\u00a0– Luftstuhl deluxe!"
         ]},
-      { "name": "Nackendehnung", "img": "14-nackendehnung.png",
-        "desc": "Kopf zur Schulter neigen, mit der Hand sanft nachziehen.",
+      { "name": "Nackendehnung", "img": "14-nackendehnung.png", "kat": "Dehnung", "dosis": "20 Sek. je Seite",
+        "desc": "Ohr Richtung Schulter neigen, Hand nur auflegen, nicht ziehen.",
         "sayings": [
-          "Ohr zur Schulter{ANR} — sanft, wir sind kein Gummiband!",
-          "Eine Seite, dann die andere — der Nacken atmet auf.",
-          "Kopf neigen, Sorgen abgießen. And breathe!"
+          "Ohr zur Schulter{ANR}\u00a0– sanft, wir sind kein Gummiband!",
+          "Nicht nur die Schokoladenseite dehnen\u00a0– beide bitte!",
+          "Kopf zur Seite, Sorgen zur Seite. And breathe!"
         ]},
-      { "name": "Brustöffner", "img": "15-brustoeffner.png",
-        "desc": "Finger hinter dem Rücken verschränken, Brust raus, Schultern zurück.",
+      { "name": "Brustöffner", "img": "15-brustoeffner.png", "kat": "Dehnung", "dosis": "3 tiefe Atemzüge",
+        "desc": "Hände in die Hüften, Ellbogen zurück, Brust raus, Kinn leicht hoch.",
         "sayings": [
-          "Brust raus, Schultern zurück{ANR} — stolz wie ein Stachel-Pfau!",
-          "Pfoten hinten verschränken und öffnen — der Bildschirm-Buckel verschwindet.",
-          "Mach dich breit{ANR} — die Welt darf den ganzen Igel sehen!"
+          "And open{ANR}! Stolz wie ein Stachel-Pfau.",
+          "Tschüss, Bildschirm-Buckel\u00a0– hallo, Heldenbrust!",
+          "Mach dich breit{ANR}! Die Welt darf den ganzen Igel sehen."
         ]},
-      { "name": "Vorbeuge", "img": "16-vorbeuge-sitzen.png",
-        "desc": "Im Sitzen über die Knie beugen, Kopf und Arme locker hängen lassen.",
+      { "name": "Vorbeuge", "img": "16-vorbeuge-sitzen.png", "kat": "Dehnung", "dosis": "5 Atemzüge",
+        "desc": "Auf der Stuhlkante den Oberkörper hängen lassen, langsam aufrollen.",
         "sayings": [
-          "Kopf hängen lassen{ANR} — aber nur körperlich, der Geist bleibt oben!",
-          "Lass mal alles baumeln — der Rücken rollt sich aus.",
-          "Tief vorbeugen, tief durchatmen — and relax."
+          "Kopf hängen lassen{ANR}\u00a0– aber nur körperlich!",
+          "Wirbel für Wirbel hoch\u00a0– der Kreislauf mag's gemütlich!",
+          "Tief runter, tief durchatmen. And relax!"
         ]},
-      { "name": "Figure-4", "img": "17-figure-4.png",
-        "desc": "Knöchel aufs gegenüberliegende Knie legen, leicht vorbeugen (Hüfte/Po).",
+      { "name": "Figur-4-Dehnung", "img": "17-figure-4.png", "kat": "Dehnung", "dosis": "20 Sek. je Seite",
+        "desc": "Im Sitzen einen Knöchel aufs andere Knie, Rücken gerade, vorlehnen.",
         "sayings": [
-          "Knöchel aufs Knie, eine Vier bauen{ANR} — die Hüfte schnurrt!",
-          "Sieht schick aus, fühlt sich besser an. Leicht vorlehnen!",
-          "Po-Dehnung im Sitzen — schlau und unauffällig{ANR}."
+          "Eine Vier bauen{ANR}\u00a0– die Hüfte schnurrt!",
+          "And lean! Sieht nach Yoga aus, ist aber Büro.",
+          "Po-Dehnung im Sitzen{ANR}\u00a0– das Meeting merkt nix!"
         ]},
-      { "name": "Handgelenksdehnung", "img": "18-handgelenk-dehnung.png",
-        "desc": "Einen Arm vorstrecken, mit der anderen Hand die Finger sanft zurückbiegen.",
+      { "name": "Handgelenksdehnung", "img": "18-handgelenk-dehnung.png", "kat": "Dehnung", "dosis": "15 Sek. je Hand",
+        "desc": "Arm vorstrecken, Finger mit der anderen Hand sanft zurückbiegen.",
         "sayings": [
-          "Arm raus, Finger sanft zurück{ANR} — die Maus-Hand kriegt Urlaub.",
-          "Erst die eine Pfote, dann die andere — fair bleibt fair!",
-          "Dehnen, nicht überdrehen — wir wollen ja noch tippen."
+          "Die Maus-Hand kriegt Urlaub{ANR}\u00a0– and stretch!",
+          "Stoppschild-Pfote! Die Tastatur darf kurz warten.",
+          "Dehnen, nicht überdrehen. Wir wollen ja noch tippen!"
         ]},
-      { "name": "Seitneige", "img": "19-seitneige.png",
-        "desc": "Einen Arm hoch über den Kopf, Oberkörper zur Gegenseite dehnen.",
+      { "name": "Seitneige", "img": "19-seitneige.png", "kat": "Dehnung", "dosis": "3 Atemzüge je Seite",
+        "desc": "Einen Arm über den Kopf, Oberkörper zur Gegenseite neigen.",
         "sayings": [
-          "Arm hoch, zur Seite neigen{ANR} — and stretch! Lang wie ein Igel im Gähnen.",
-          "Einmal eine schöne Banane machen — krumm war nie so gesund!",
-          "Flanke dehnen, Luft holen — die andere Seite will auch!"
+          "Arm hoch und rüber{ANR}\u00a0– and stretch, and stretch!",
+          "Einmal eine schöne Banane machen! Krumm war nie so gesund.",
+          "Die andere Seite ist schon ganz neidisch. And switch!"
         ]},
-      { "name": "Ganzkörper-Streckung", "img": "20-ganzkoerper-streckung.png",
-        "desc": "Auf die Zehenspitzen, beide Arme weit nach oben strecken, langmachen.",
+      { "name": "Ganzkörper-Streckung", "img": "20-ganzkoerper-streckung.png", "kat": "Dehnung", "dosis": "3× je 5 Sek.",
+        "desc": "Auf die Zehenspitzen, beide Arme weit nach oben strecken.",
         "sayings": [
-          "Mach dich lang{ANR} — auf die Zehen, Arme zum Himmel!",
-          "Strecken und gähnen erlaubt — der ganze Igel wird wach!",
-          "Einmal so groß wie möglich — and reach! Du wächst förmlich."
+          "Mach dich lang{ANR}\u00a0– die Bürodecke ist das Limit!",
+          "Strecken und gähnen erlaubt: Der ganze Igel wird wach!",
+          "And reach, and reach! Hallo, Deckenlampe!"
         ]}
     ],
     "anrede": {
-      "weiblich": ["Stachelprinzessin", "Stachelfee", "Igeldame", "Stacheldame", "Stachelblume", "Stachelmaus"],
-      "männlich": ["Stachelritter", "Igelheld", "Stachelprinz", "Stachelboss", "Igelkönig", "Stachelchampion"]
+      "weiblich": ["Igelheldin", "Stachelchefin", "Igelkönigin", "Igelprinzessin", "Stulpenkönigin", "Stachelqueen"],
+      "maennlich": ["Igelheld", "Stachelchef", "Igelkönig", "Igelprinz", "Stulpenkönig", "Stachelchamp"]
     }
   }
 custom_fields:
   - keyname: bild_basis_url
     field_type: url
     name: Bild-Basis-URL
-    description: Basis-URL, unter dem die Igel-Bilder liegen (mit Slash am Ende). Leer lassen für die per GitHub Pages gehosteten Standardbilder.
+    description: Basis-URL, unter der die Igel-Bilder liegen (mit Slash am Ende). Leer lassen für die per GitHub Pages gehosteten Standardbilder.
     placeholder: https://shostakovich.github.io/hedgehog-fit/assets/uebungen/
     optional: true
   - keyname: anrede
@@ -163,7 +163,7 @@ custom_fields:
     name: Anrede
     description: Wie der Igel dich anspricht
     options:
-      - Neutral
-      - Weiblich
-      - Männlich
+      - Neutral: neutral
+      - Weiblich: weiblich
+      - Männlich: maennlich
     default: neutral

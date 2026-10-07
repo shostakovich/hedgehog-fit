@@ -4,7 +4,7 @@ A private [TRMNL](https://usetrmnl.com) e-ink plugin. On every refresh it shows 
 
 ## What it shows
 
-Twenty office-friendly bodyweight exercises are defined, evenly spread across **mobilisation**, **strength** and **stretching** (each takes under a minute). Every exercise has a name, a short description, a matching hedgehog image and three possible sayings. The plugin picks an exercise and a saying deterministically from the UTC timestamp, so the display changes with each refresh without requiring state.
+Twenty office-friendly bodyweight exercises are defined, evenly spread across **mobilisation**, **strength** and **stretching** (each takes under a minute). Every exercise has a name, a category, a dose (e.g. `10×`, `30 Sek.`), a short instruction, a matching hedgehog image and three possible sayings. The screen shows the saying in a comic speech bubble next to the hedgehog, then name, dose and instruction. The plugin picks an exercise and a saying deterministically from the UTC timestamp, so the display changes with each refresh without requiring state.
 
 The exercise/image reference lives in [`docs/uebungen-referenz.md`](docs/uebungen-referenz.md) (rendered overview: [`docs/uebungen-referenz.html`](docs/uebungen-referenz.html)); the sayings in [`docs/uebungen-texte.md`](docs/uebungen-texte.md).
 
@@ -15,9 +15,9 @@ The plugin exposes these custom fields in the TRMNL dashboard:
 | Field | Key | Type | Options / notes |
 |-------|-----|------|------|
 | Bild-Basis-URL | `bild_basis_url` | url | Optional. Base URL hosting the 20 hedgehog images (trailing slash). Leave empty to use the default GitHub Pages-hosted images. |
-| Anrede (form of address) | `anrede` | select | Neutral, Weiblich, Männlich |
+| Anrede (form of address) | `anrede` | select | Neutral (`neutral`), Weiblich (`weiblich`), Männlich (`maennlich`) |
 
-**Anrede** — setting **Weiblich** or **Männlich** causes the hedgehog to insert a gendered term of address (e.g. "Stachelfee", "Igelheld") into sayings that have an `{ANR}` placeholder. Selecting **Neutral** (the default) leaves those slots empty.
+**Anrede** — setting **Weiblich** or **Männlich** causes the hedgehog to insert a gendered term of address (e.g. "Igelheldin", "Igelheld") into sayings that have an `{ANR}` placeholder. Selecting **Neutral** (the default) leaves those slots empty. Option values are explicit ASCII keys: TRMNL parameterizes plain select labels ("Männlich" → `mannlich`), which would miss the pool key.
 
 ## Images
 
@@ -28,6 +28,10 @@ https://shostakovich.github.io/hedgehog-fit/assets/uebungen/
 ```
 
 That URL is the built-in default, so the plugin works out of the box with no configuration. To host the images elsewhere, set **Bild-Basis-URL** to the directory that contains the files; the plugin appends each exercise's filename (`01-schulterkreisen.png` … `20-ganzkoerper-streckung.png`).
+
+## Images on e-ink
+
+The PNGs are prepared for 1-bit dithering: trimmed to the figure, 2× display height, line art thickened and the tone range pushed so the plush body renders white and the spines solid black, plus a closed black outline along the silhouette. Without this the body turns into grey dither noise on the device.
 
 ## Implemented sizes
 
@@ -50,7 +54,7 @@ For local preview the variables (user name, `anrede`, instance name) are configu
 
 ## Content and data
 
-All plugin content lives in `src/settings.yml` under `static_data`. The plugin strategy is `static`, so the JSON is merged as template variables on every render. Exercises (name, image filename, description, sayings) and the form-of-address pools are all defined there. To add/edit an exercise or saying, edit `src/settings.yml`.
+All plugin content lives in `src/settings.yml` under `static_data`. The plugin strategy is `static`, so the JSON is merged as template variables on every render. Exercises (name, image filename, category `kat`, dose `dosis`, instruction `desc`, sayings) and the form-of-address pools are all defined there. Keep sayings ≤ 72 characters including the longest term of address, and instructions ≤ 70 characters. `docs/uebungen-texte.md` and `docs/uebungen-referenz.*` mirror this data. To add/edit an exercise or saying, edit `src/settings.yml`.
 
 ## Development notes
 
