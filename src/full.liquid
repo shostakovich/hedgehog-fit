@@ -12,7 +12,7 @@
 {%- assign saying = ex.sayings[say_idx] -%}
 
 {%- comment -%} Optionale Anrede-Einblendung {%- endcomment -%}
-{%- assign anrede_value = trmnl.plugin_settings.custom_fields_values.anrede | default: "neutral" -%}
+{%- assign anrede_value = trmnl.plugin_settings.custom_fields_values.anrede | default: "neutral" | downcase -%}
 {%- assign anr = "" -%}
 {%- unless anrede_value == "neutral" -%}
   {%- assign anr_pool = anrede[anrede_value] -%}
@@ -24,21 +24,38 @@
 {%- endunless -%}
 {%- assign text = saying | replace: "{ANR}", anr -%}
 
+<style>
+  .hf-text { gap: 28px; }
+  .hf-name--long { font-size: 42px; }
+  .hf-dose { padding: 2px 12px; border-radius: 8px; }
+  .hf-bubble { position: relative; border: 3px solid #000; border-radius: 16px; padding: 12px 18px; }
+  .hf-bubble .title { display: block; font-size: 24px; line-height: 1.25; text-wrap: balance; }
+  .hf-bubble::after { content: ""; position: absolute; right: -14px; top: calc(100% - 3px); width: 64px; height: 30px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='30'%3E%3Cpath d='M0 0 L60 28 L26 0 Z' fill='white'/%3E%3Cpath d='M0 1.5 L60 28 L26 1.5' fill='none' stroke='black' stroke-width='3.5' stroke-linejoin='round' shape-rendering='crispEdges'/%3E%3C/svg%3E") no-repeat; }
+</style>
+
 <div class="layout">
   <div class="grid">
-    <div class="col--span-7 flex flex--col flex--center-y flex--left gap">
-      <span class="title title--large" data-clamp="2">{{ ex.name }}</span>
-      <span class="title" data-clamp="3">{{ ex.desc }}</span>
-      <span class="title title--small" data-clamp="3">{{ text }}</span>
+    <div class="col--span-7 flex flex--col flex--center-y flex--left h--96 hf-text">
+      <div class="hf-bubble">
+        <span class="title" data-clamp="3">{{ text }}</span>
+      </div>
+      <div class="flex flex--col flex--left gap--medium">
+        <div class="flex flex--col flex--left gap--small">
+          <span class="value value--large{% if ex.name.size > 15 %} hf-name--long{% endif %}">{{ ex.name }}</span>
+          <span class="label label--xlarge label--inverted hf-dose">{{ ex.dosis }}</span>
+        </div>
+        <span class="description description--xxlarge" data-clamp="3">{{ ex.desc }}</span>
+      </div>
     </div>
     <div class="col--span-5 flex flex--center">
-      <img class="image image-dither image--contain h--72" src="{{ img_base }}{{ ex.img }}">
+      <img class="image image-dither image--contain h--96" src="{{ img_base }}{{ ex.img }}">
     </div>
   </div>
 </div>
 
 <div class="title_bar">
-  <img class="image" src="https://trmnl.com/images/plugins/trmnl--render.svg">
+  <img class="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAQAAAAB/ecQqAAAA1klEQVQY033QsUoDQRCA4X9zhkshCBKwcy3FJ7AQ9zpJa2XpI1haCHuddiltrX0Ic2+QVziCvSGFbLF74+wego2Z5mOGGZgZpAT/sF4WqroAVungSGlhNoInUdj+wY7UI9Uv3ViEi3cMTG8XjSbzdnKnND5NlVeRHUzc50lsOYjHb7ah2rwsbjrquU/nPYfPIpt7jBPJLXnbM4g+ejDRRddiggtKFWywOheuH11PHS+vMsPDqe8xsrV6wJMEJx+ITg9e+f7K165265QJtiAyCMkrK/b87Ac3b6QytQ61AAAAAABJRU5ErkJggg==">
   <span class="title">{{ trmnl.plugin_settings.instance_name | default: "Hedgehog Fit" }}</span>
-  <span class="instance">Fitness-Igel</span>
+  <span class="instance">{{ ex.kat }}</span>
 </div>
