@@ -31,7 +31,7 @@ That URL is the built-in default, so the plugin works out of the box with no con
 
 ## Images on e-ink
 
-The PNGs are prepared for 1-bit dithering: trimmed to the figure, 2× display height, line art thickened and the tone range pushed so the plush body renders white and the spines solid black, plus a closed black outline along the silhouette. Without this the body turns into grey dither noise on the device.
+The TRMNL OG shows 4 grey levels (#000, #555, #AAA, #FFF). The PNGs are prepared for exactly that: trimmed to the figure, line art thickened, tone range pushed so the plush body renders white and the spines solid black, a closed black outline along the silhouette, then reduced to the 4 device tones without dithering at the exact display box (max. 302 × 384 px). The device then neither scales nor dithers them; arbitrary greys or larger images turn into pixel noise.
 
 ## Implemented sizes
 
